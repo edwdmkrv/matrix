@@ -31,11 +31,3 @@ deploy:
     script: bash .deploy.sh "$TRAVIS_BUILD_NUMBER" "$BINTRAY_API_KEY"
     on:
       branch: master
-  - provider: pages
-    local-dir: html
-    skip_cleanup: true
-    github-token: "$GITHUB_TOKEN"
-    keep_history: false
-    verbose: true
-    on:
-      branch: master
